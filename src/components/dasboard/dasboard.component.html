@@ -1,0 +1,24 @@
+
+
+
+<div class="outer">
+    <div class="cards-list">
+        <div *ngFor='let list of cardListData;let i = index'>
+        <div class="bd-callout">
+           <div class="left">
+            <div class="number" *ngIf="list?.Type == 'number'">{{list?.Data}}</div>
+            <canvas class="canvas" *ngIf="list?.Type == 'chart'" baseChart width="2" height="1" [data]="list.DataList"
+            [options]="chartOptions" [chartType]="doughnutChartType" [colors]="list?.ChartColors">
+            </canvas>
+           </div>
+            <div class="right">{{list?.Text}}</div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="chart-list">
+    
+    </div>
+
+</div>
+

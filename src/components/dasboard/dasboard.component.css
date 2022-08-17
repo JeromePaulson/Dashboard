@@ -1,0 +1,67 @@
+.outer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.cards-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: #ebf8fb;
+    width: 100%;
+    padding: 10px 5px 2px 20px;
+
+}
+
+.chart-list {
+    background-color: #ebf8fb;
+    height: 500px;
+    width: 100%;
+    padding: 2px 5px 2px 45px;
+}
+
+
+
+
+.bd-callout {
+    border-left: 3px solid #d97a21;
+    padding: 5px 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    width: 260px;
+    background: #fff;
+    font-size: 14px;
+    text-align: start;
+    border-radius: 7px;
+    display: flex;
+    height: 110px;
+}
+
+.bd-callout .left {
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+
+.bd-callout .right {
+    display: flex;
+    width: 60%;
+    align-items: center;
+}
+
+.bd-callout .left .number {
+    font-size: 40px;
+    font-weight: 900;
+    color: green;
+    text-transform: capitalize;
+}
+.bd-callout .left .canvas{
+        height: 75px !important;
+            width: 140px !important;
+            margin-left: -40px;
+            margin-top: -15px;
+}
