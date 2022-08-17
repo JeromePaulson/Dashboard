@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType } from 'chart.js';
-import { MultiDataSet, Label } from 'ng2-charts';
+import { MultiDataSet, Label, SingleDataSet } from 'ng2-charts';
 @Component({
   selector: 'app-dasboard',
   templateUrl: './dasboard.component.html',
@@ -81,21 +81,42 @@ export class DasboardComponent implements OnInit {
     responsive: true,
     cutoutPercentage: 70,
     tooltips: { enabled: false },
-    elements:
-    {
-      point:
-      {
-        radius: 4,
-        hitRadius: 5,
-        hoverRadius: 10,
-        hoverBorderWidth: 2
-      }
-    }
   };
+
+  public pieChartOptions: ChartOptions = {
+    responsive: true,
+    cutoutPercentage: 70,
+  };
+  public pieChartLabels: Label[] = ["Label 1", "Label 2"];
+  public pieChartData: SingleDataSet = [100, 123];
+  public pieChartType: ChartType = "doughnut";
+  public pieChartLegend = true;
+  public pieChartColors = [
+    {
+      backgroundColor: ['#247584 ', '#2e90a2'],
+      borderWidth: [0, 0],
+      borderColor: "rgb(0,61,143)",
+      hoverBackgroundColor: "rgb(0,61,143,0.8)",
+      hoverBorderColor: "rgb(0,61,143)",
+
+    },
+  ]
+  public pieChartPlugins = [
+
+  ];
+
+  public testdata: any = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    for (let i = 0; i < this.pieChartData.length; ++i) {
+      if (this.pieChartData[i] == 0) {
+        this.testdata.push("");
+      } else {
+        this.testdata.push(this.pieChartData[i]);
+      }
+    }
   }
   counter(i: number) {
     return new Array(i);

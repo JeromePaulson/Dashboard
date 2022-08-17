@@ -7,7 +7,7 @@
         <div class="bd-callout">
            <div class="left">
             <div class="number" *ngIf="list?.Type == 'number'">{{list?.Data}}</div>
-            <canvas class="canvas" *ngIf="list?.Type == 'chart'" baseChart width="2" height="1" [data]="list.DataList"
+            <canvas class="canvas" *ngIf="list?.Type == 'chart'" baseChart [data]="list.DataList"
             [options]="chartOptions" [chartType]="doughnutChartType" [colors]="list?.ChartColors">
             </canvas>
            </div>
@@ -17,6 +17,17 @@
     </div>
     
     <div class="chart-list">
+        <div class="list-24">
+            <h5>Task Distribution</h5>
+                <canvas  class="canvas2" baseChart [data]="testdata" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions"
+                    [colors]="pieChartColors" [plugins]="pieChartPlugins" [legend]="false"></canvas>
+        </div>
+        <div class="list-38">
+    <h5>Task By Bienex sectors</h5>
+        </div>
+        <div class="list-38">
+        <h5>Task By Auraa</h5>
+        </div>
     
     </div>
 
