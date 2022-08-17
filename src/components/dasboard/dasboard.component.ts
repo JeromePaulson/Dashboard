@@ -88,16 +88,17 @@ export class DasboardComponent implements OnInit {
     cutoutPercentage: 70,
   };
   public pieChartLabels: Label[] = ["Label 1", "Label 2"];
-  public pieChartData: SingleDataSet = [100, 123];
+  public pieChartData: SingleDataSet = [40, 123];
   public pieChartType: ChartType = "doughnut";
   public pieChartLegend = true;
   public pieChartColors = [
     {
       backgroundColor: ['#247584 ', '#2e90a2'],
       borderWidth: [0, 0],
-      borderColor: "rgb(0,61,143)",
-      hoverBackgroundColor: "rgb(0,61,143,0.8)",
-      hoverBorderColor: "rgb(0,61,143)",
+      borderColor: ['#247584 ', '#2e90a2'],
+      hoverBackgroundColor: ['#247584 ', '#2e90a2'],
+      hoverBorderColor: ['#247584 ', '#2e90a2'],
+      hoverBorderWidth: [5, 5],
 
     },
   ]

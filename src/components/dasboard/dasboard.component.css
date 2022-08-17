@@ -83,14 +83,14 @@
 }
 
 .chart-list .list-24 .canvas2 {
-height: 200px !important;
+    height: 200px !important;
     width: 400px !important;
     padding: 10px;
     margin-left: -100px;
 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .chart-list {
         flex-direction: column !important;
         row-gap: 5px;
